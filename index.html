@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carte de bucate</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body class="dark-mode">
+	<header>
+		<h1>Carte de bucate</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Acasă</a></li>
+				<li><a href="#">Rețete</a></li>
+				<li><a href="#">Despre noi</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="intro">
+			<h2>Bun venit la Cartea de bucate</h2>
+			<p>În această carte veți găsi cele mai bune rețete pentru prepararea unor mâncăruri delicioase și sănătoase.</p>
+			<button id="cumpara">Cumpără cartea</button>
+		</section>
+		<section id="rețete">
+			<h2>Rețete</h2>
+			<ul>
+				<li>
+					<img src="imagini/reteta1.jpg">
+					<h3>Salată de varză</h3>
+					<p>Ingrediente: varză, morcov, ceapă, ulei de măsline, oțet de mere, sare, piper.</p>
+					<button id="buton1" onclick="changeBackground('green')">Reteta 1</button>
+				</li>
+				<li>
+					<img src="imagini/reteta2.jpg">
+					<h3>Spaghete cu sos de roșii</h3>
+					<p>Ingrediente: spaghete, roșii, usturoi, ulei de măsline, sare, piper, busuioc.</p>
+					<button id="buton2" onclick="changeBackground('red')">Reteta 2</button>
+				</li>
+				<li>
+					<img src="imagini/reteta3.jpg">
+					<h3>Cioccolata calda</h3>
+					<p>Ingrediente: ciocolată, lapte, frișcă, zahăr, esență de vanilie.</p>
+					<button id="buton3" onclick="changeBackground('black')">Reteta 3</button>
+				</li>
+			</ul>
+		</section>
+		<section id="despre-noi">
+			<h2>Despre noi</h2>
+			<p>Noi suntem o echipă de bucătari pasionați și ne-am propus să împărtășim cu voi cele mai bune rețete pentru mâncăruri sănătoase și gustoase.</p>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<form>
+				<label for="nume">Nume:</label>
+				<input type="text" id="nume" name="nume">
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+
+				<label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj"></textarea>
+
+                <button>Trimite</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; test tema1</p>
+    </footer>
+</body>
+</html>
