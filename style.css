@@ -17,21 +17,9 @@ header {
 	padding: 20px;
 }
 
-button#cumpara {
-    width: 150px;
-    height: 150px;
-    background-color: #008CBA;
-    color: white;
-    font-size: 24px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button#cumpara:hover {
-    background-color: yellow;
-    color: black;
+header h1 {
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
@@ -39,6 +27,7 @@ nav ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
+  justify-content: center;
 }
 
 nav li {
@@ -48,6 +37,23 @@ nav li {
 nav a {
 	color: #fff;
 	text-decoration: none;
+}
+
+button#cumpara {
+  width: 150px;
+  height: 150px;
+  background-color: #008CBA;
+  color: white;
+  font-size: 24px;
+  border-radius: 30%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#cumpara:hover {
+  background-color: yellow;
+  color: black;
 }
 
 main {
@@ -88,7 +94,7 @@ section li h3 {
 }
 
 section li p {
-	font-size: 14px;
+	font-size: 20px;
 	margin: 10px 0;
 }
 
