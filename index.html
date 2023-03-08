@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator3</title>
+</head>
+<body>
+     <h1>Exemplu Formular</h1>
+
+     <form>
+        <label for="name">Nume:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="password">Parola:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="tel">Telefon:</label>
+        <input type="tel" id="tel" name="tel"><br><br>
+        
+        <label for="date">Dată:</label>
+        <input type="date" id="date" name="date"><br><br>
+        
+        <label for="time">Ora</label>
+        <input type="time" id="time" name="time"><br><br>
+        
+        <label for="number">Numar</label>
+        <input type="number" id="number" name="number"><br><br>
+        
+        <label for="range">Interval:</label>
+        <input type="range" id="range" name="range"><br><br>
+        
+        <label for="color">Culoare:</label>
+        <input type="color" id="color" name="color"><br><br>
+        
+        <label for="checkbox">CheckBox:</label>
+        <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+        
+        <label for="radio1">Radio Buton 1:</label>
+        <input type="radio" id="radio1" name="radio" value="radio1"><br><br>
+        
+        <label for="radio2">Radio Buton 2:</label>
+        <input type="radio" id="radio2" name="radio" value="radio2"><br><br>
+        
+        <label for="textarea">Text Area:</label>
+        <textarea id="textarea" name="textarea"></textarea><br><br>
+        
+        <label for="select">Combo Box</label>
+        <select id="select" name="select">
+          <option value="optiune1">Opțiune 1</option>
+          <option value="optiune2">Opțiune 2</option>
+          <option value="optiune3">Opțiune 3</option>
+        </select><br><br>
+        
+        <button formaction="https://web.ciuca.ro/cerere" formmethod="get">Trimite</button>
+      </form>
+
+    <br>
+
+    <table border="5">
+        <caption><b>TABEL ECHIPE</b></caption>
+        
+        <thead>
+          <tr>
+            <th>Nume</th>
+            <th>Prenume</th>
+            <th>Varsta</th>
+            <th>Telefon</th>
+            <th>Nume Echipa</th>
+            <th>Poza Echipa</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr>
+            <td style="width: 150px;">Popescu</td>
+            <td style="width: 150px;">Alex</td>
+            <td>35</td>
+            <td style="width: 100px;">0722973263</td>
+            <td rowspan="2" style="width: 150px;">Lazy Pandas</td>
+            <td rowspan="2"><img src="./lpanda1.jpg" alt="pandas"></td>
+          </tr>
+          <tr>
+            <td>Ionescu</td>
+            <td>Mircea</td>
+            <td>27</td>
+            <td>0722973263</td>
+          </tr>
+          <tr>
+            <td>Romeghea</td>
+            <td>Andrei</td>
+            <td>16</td>
+            <td>0722973263</td>
+            <td rowspan="2" style="width: 150px;">Dancing Kangaro</td>
+            <td rowspan="2"><img src="./dkangaro1.jpg" alt="kangaro"></td>
+          </tr>
+          <tr>
+            <td>Neacsu</td>
+            <td>Bogdan </td>
+            <td>25</td>
+            <td>0722973263</td>
+          </tr>
+        </tbody>
+        
+        <tfoot>
+          <tr>
+            <td colspan="6">Total: 4 persoane</td>
+          </tr>
+        </tfoot>
+      </table>
+</body>
+</html>
