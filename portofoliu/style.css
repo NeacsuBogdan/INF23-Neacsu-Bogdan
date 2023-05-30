@@ -1,10 +1,11 @@
-body {
+@media screen and (min-width: 2560px) {
+  body {
     font-family: Arial, sans-serif;
     background-color: black;
     margin: 0;
     padding: 0;
   }
-  
+
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +15,7 @@ body {
     padding: 20px;
     box-sizing: border-box;
   }
-  
+
   .card {
     background-color: #e8e8e8;
     border: none;
@@ -30,24 +31,24 @@ body {
     align-items: center;
     transition: transform 0.3s ease;
   }
-  
+
   .card:hover {
     transform: scale(1.05);
   }
-  
+
   .card h3 {
     color: #fff;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
   }
-  
+
   .card p {
     color: #fff;
     font-size: 14px;
     text-align: center;
   }
-  
+
   .popup {
     display: none;
     position: fixed;
@@ -59,7 +60,7 @@ body {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
   }
-  
+
   .popup-content {
     background-color: #fefefe;
     margin: 10% auto;
@@ -71,7 +72,7 @@ body {
     max-height: 400px; /* Setează înălțimea maximă a pop-up-ului */
     overflow-y: auto; /* Adaugă bara de derulare verticală */
   }
-  
+
   .close-popup {
     color: #aaa;
     float: right;
@@ -79,13 +80,14 @@ body {
     font-weight: bold;
     cursor: pointer;
   }
-  
+
   .close-popup:hover,
   .close-popup:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
+}
   
   @media screen and (max-width: 768px) {
     body {
