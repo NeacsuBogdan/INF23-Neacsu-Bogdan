@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Slideshow Poezii</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <canvas id="snowfall"></canvas>
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active" onclick="loadHome()">Acasa</a>
+    <a href="#portofoliu" onclick="loadPortofoliu()">Portofoliu</a>
+    <a href="#setings" onclick="openSettingsPanel()">Setari</a> <!-- Noul element de ancoră pentru setări -->
+    <a href="#Menu" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>  
+
+  <div id="slideshow"></div>
+  
+  <div id="portofoliu" class="hidden">
+    <object id="portofoliu-object" type="text/html" data="portofoliu/portofoliu.html"></object>
+  </div>
+
+  <div id="moon-container">
+    <svg id="moon-phase" class="fade-in" viewBox="220 190 130 130">
+      <path id="moon-svg" fill="white"></path>
+    </svg>
+  </div>     
+
+<div id="settings-panel">
+  <h3 id="settings-title">Setari</h3>
+  <div class="switch">
+    <label for="snowfall-switch">Zapada:</label>
+    <input type="checkbox" id="snowfall-switch" checked onchange="toggleSnowfall()">
+  </div>
+  <div class="switch">
+    <label for="explicit-switch">Continut explicit:</label>
+    <input type="checkbox" id="explicit-switch" onchange="toggleExplicitContent()">
+  </div>
+  <button onclick="closeSettingsPanel()">Inchide</button>
+</div>
+
+  
+
+  <div id="popup" class="popup">
+    <div id="popup-content" class="popup-content">
+      <span id="close-popup" class="close-popup">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-poem"></p>
+    </div>
+  </div>
+
+  <div id="cookie-popup" class="popup">
+    <div id="cookie-popup-content" class="popup-content">
+      <h2 id="cookie-popup-title">Politica de cookies și local storage</h2>
+      <p>Site-ul nostru utilizează local storage pentru a îmbunătăți experiența utilizatorului.</p>
+      <p>Acceptând local storage, sunteți de acord cu stocarea datelor dumneavoastră în browser-ul dumneavoastră pentru a personaliza conținutul și pentru a vă oferi o experiență mai bună.</p>
+      <p>Dacă nu acceptați local storage, poeziile salvate în secțiunea de favorite nu vor fi păstrate între sesiuni.</p>
+      <p>Puteți gestiona setările de local storage utilizând butoanele de mai jos.</p>
+      <div class="button-container">
+        <button id="accept-localstorage-button">Acceptă local storage</button>
+        <button id="reject-button">Nu accept</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
