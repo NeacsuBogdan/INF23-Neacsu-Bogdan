@@ -1,25 +1,27 @@
 @charset "UTF-8";
 
-body {
-  background-color: black;
-  color: white;
-}
+@media screen and (min-width: 2560px) {
+  body {
+    background-color: black;
+    color: white;
+  }
 
-.hidden {
-  display: none;
-}
+  .hidden {
+    display: none;
+  }
 
-.slide {
-  display: none;
-  text-align: center;
-  position: relative;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  overflow: hidden;
-  cursor: pointer;
+  .slide {
+    display: none;
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
-  p {
+  .slide p {
     display: block;
     white-space: pre-wrap;
     overflow: hidden;
@@ -27,30 +29,30 @@ body {
     font-size: 25px;
   }
 
-  &.expand p {
+  .slide.expand p {
     white-space: unset;
   }
-}
 
-#slideshow {
-  position: relative;
-  margin: 0 auto;
-  max-width: 800px;
-  height: auto;
-  overflow: hidden;
-}
+  #slideshow {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    height: auto;
+    overflow: hidden;
+  }
 
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-  .popup-content {
+  .popup .popup-content {
     color: black;
     position: absolute;
     top: 50%;
@@ -67,40 +69,39 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
-    .popup-title {
-      margin-bottom: 10px;
-      font-weight: bold;
+  .popup .popup-content .popup-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .popup .popup-content .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  @keyframes slideAnimation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
     }
-
-    .close-popup {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
+    100% {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
-}
 
-@keyframes slideAnimation {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
+  /* Stilurile existente */
+  #popup {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
-/* Stilurile existente */
-
-#popup {
-  display: none;
-
-  .popup {
+  #popup .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -111,64 +112,63 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-
-    .popup-content {
-      background-color: #fff;
-      padding: 20px;
-      max-width: 500px;
-      text-align: center;
-
-      .popup-title {
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-
-      .button-container {
-        margin-top: 20px;
-
-        button {
-          margin: 0 10px;
-          padding: 10px 20px;
-          background-color: #428bca;
-          color: #fff;
-          border: none;
-          cursor: pointer;
-        }
-
-        button:hover {
-          background-color: #3071a9;
-        }
-      }
-
-      .close-popup {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    }
   }
-}
 
-#snowfall {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+  #popup .popup .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+  }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  z-index: 2;
-  position: relative;
+  #popup .popup .popup-content .popup-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 
-  /* Style the links inside the navigation bar */
-  a {
+  #popup .popup .popup-content .button-container {
+    margin-top: 20px;
+  }
+
+  #popup .popup .popup-content .button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  #popup .popup .popup-content .button-container button:hover {
+    background-color: #3071a9;
+  }
+
+  #popup .popup .popup-content .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 2;
+    position: relative;
+  }
+
+  .topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -176,94 +176,91 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-
-    /* Change the color of links on hover */
-    &:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    /* Add an active class to highlight the current page */
-    &.active {
-      background-color: #04AA6D;
-      color: white;
-    }
   }
 
-  /* Hide the link that should open and close the topnav on small screens */
-  .icon {
-    display: none;
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
   }
-}
 
-#portofoliu-object {
-  width: 100%;
-  height: 95vh;
-  position: fixed;
-  top: 65px;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  z-index: -1;
-}
-
-#moon-container {
-  position: fixed;
-  bottom: 0;
-  margin-top: 300px;
-  display: flex;
-  justify-content: center;
-  max-height: 130px;
-  z-index: -1;
-  width: 100%;
-
-  #moon-phase {
+  .topnav a.active {
+    background-color: #04AA6D;
     color: white;
   }
 
-  #moon-svg {
+  .topnav .icon {
+    display: none;
+  }
+
+  #portofoliu-object {
+    width: 100%;
+    height: 95vh;
+    position: fixed;
+    top: 65px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+  }
+
+  #moon-container {
+    position: fixed;
+    bottom: 0;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    max-height: 130px;
+    z-index: -1;
+    width: 100%;
+  }
+
+  #moon-container #moon-phase {
+    color: white;
+  }
+
+  #moon-container #moon-svg {
     filter: drop-shadow(0 0 10px white);
   }
-}
 
-/* Stilurile pentru panoul de setări */
-#settings-panel {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100vh;
-  background-color: #f1f1f1;
-  transition: right 0.3s ease-in-out;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 9999;
-  color: black;
+  /* Stilurile pentru panoul de setări */
+  #settings-panel {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    color: black;
+  }
 
-  #settings-title {
+  #settings-panel #settings-title {
     font-size: 20px;
     margin-bottom: 10px;
     color: #000;
   }
 
-  .switch {
+  #settings-panel .switch {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
-
-    label {
-      margin-bottom: 5px;
-      color: #000;
-    }
-
-    input[type=checkbox] {
-      order: 1;
-      margin-left: 10px;
-    }
   }
 
-  button {
+  #settings-panel .switch label {
+    margin-bottom: 5px;
+    color: #000;
+  }
+
+  #settings-panel .switch input[type=checkbox] {
+    order: 1;
+    margin-left: 10px;
+  }
+
+  #settings-panel button {
     display: block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -275,7 +272,7 @@ body {
     font-weight: bold;
   }
 
-  button:hover {
+  #settings-panel button:hover {
     background-color: #45a049;
   }
 }
